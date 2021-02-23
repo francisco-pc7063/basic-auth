@@ -1,0 +1,30 @@
+version: '3.0'
+services:
+  pg:
+    image: postgres:latest
+    ports:
+      - 5432:5432
+    environment:
+      POSTGRES_PASSWORD: development
+      POSTGRES_USER: development
+      POSTGRES_DB: dev
+      LANG: en_US.utf8
+  #keycloak:
+  #  image: quay.io/keycloak/keycloak:latest
+  #  ports:
+  #    - 8080:8080
+  #  environment: 
+  #    KEYCLOAK_USER: admin
+  #    KEYCLOAK_PASSWORD: admin
+  #linuxadmin:
+    #build: ./
+    #volumes: 
+    #  - ./:/opt/basic-auth
+    #working_dir: /opt/basic-auth
+    #environment:
+    #  NODE_ENV: development
+    #  DB_USER: root
+    #  DB_PASSWORD: uniceub
+    #  DB_NAME: discord_dev
+    #  DB_HOST: db
+    #command: "bash -c 'rm -rf node_modules && npm i && npm run dev'"
